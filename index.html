@@ -15,36 +15,38 @@
 <body>
 
 
-
-    <header id="header">
-        <nav class="white" role="navigation" id="nav-bar">
-            <div class="nav-wrapper container">
-                <div class="row">
-
-
-
-                    <a id="logo-container" href="#" class="brand-logo">
-                        <img src="images/logo.png" id="header-img"> Superb Guitar Lessons
-                    </a>
+    <div class="navbar-fixed">
+        <header id="header">
+            <nav class="white" role="navigation" id="nav-bar">
+                <div class="nav-wrapper container">
+                    <div class="row">
 
 
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#index_banner" class="nav-link">Get Started</a></li>
-                        <li><a href="#videos" class="nav-link">Watch Videos</a></li>
-                        <li><a href="#" class="nav-link">Contact Us</a></li>
-                    </ul>
-                    <ul id="nav-mobile" class="sidenav">
-                        <li><a href="#index_banner" class="nav-link">Get Started</a></li>
-                        <li><a href="#videos" class="nav-link">Watch Videos</a></li>
-                        <li><a href="#" class="nav-link">Contact Us</a></li>
-                    </ul>
-                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+                        <a id="logo-container" href="#" class="brand-logo">
+                            <img src="images/logo.png" id="header-img"> Superb Guitar Lessons
+                        </a>
+
+
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#index_banner" class="nav-link">Get Started</a></li>
+                            <li><a href="#videos" class="nav-link">Watch Videos</a></li>
+                            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                        </ul>
+                        <ul id="nav-mobile" class="sidenav">
+                            <li><a href="#index_banner" class="nav-link">Get Started</a></li>
+                            <li><a href="#videos" class="nav-link">Watch Videos</a></li>
+                            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                        </ul>
+                        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i
+                                class="material-icons">menu</i></a>
+                    </div>
+
+
                 </div>
-
-
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+    </div>
 
     <div class="parallax-container">
         <div class="section no-pad-bot">
@@ -138,20 +140,24 @@
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4>Watch These Lessons!</h4>
                     <div class="row">
-                        <div class="col s6">
+                        <div class="col s6" id="video">
                             <div class="video-container" id="video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8HSFfi7VG3Y"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <video id="video">
+                                    <iframe width="560" height="315" id="video"
+                                        src="https://www.youtube.com/embed/8HSFfi7VG3Y" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </video>
                             </div>
                         </div>
                         <div class="col s6">
                             <div class="video-container" id="video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/tWhmSvp1YUY"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <video id="video">
+                                    <iframe width="560" height="315" id="video"
+                                        src="https://www.youtube.com/embed/tWhmSvp1YUY" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -176,12 +182,32 @@
 
 
     <div class="container">
-        <div class="section">
+        <div class="section" id="contact">
 
             <div class="row">
                 <div class="col s12 center">
                     <h3><i class="mdi-content-send brown-text"></i></h3>
                     <h4>Contact Us</h4>
+
+                    <form action="#" name="contact_form" id="form">
+                        <label for="first_name">First Name</label>
+                        <input name="first_name" type="text" id="first_name" required placeholder="John" />
+                        <br>
+                        <label for="last_name">Last Name</label>
+                        <input name="last_name" type="text" id="last_name" required placeholder="Doe" />
+                        <br>
+                        <label for="email">Email</label>
+                        <input name="email" type="email" id="email" required placeholder="you@domain.com" />
+                        <br>
+                        <label for="message">Message</label><br>
+                        <textarea name="message" cols="30" rows="10" placeholder="Enter your message here ..."
+                            required> </textarea>
+                        <div class="center">
+                            <input type="submit" value="Submit" id="submit">
+                        </div>
+                    </form>
+
+
                     <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                         scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna
                         fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra
